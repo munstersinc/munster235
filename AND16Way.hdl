@@ -1,0 +1,27 @@
+/******************
+*Matthew R Munster
+*AND16Way Chip
+*******************/
+
+CHIP AND16Way {
+
+    IN  in[16];						//16 bit input
+    OUT out;						//1 bit output
+
+    PARTS:
+    And(a=in[0], b=in[1], out=c0);			//program takes all of the bits
+    And(a=c0, b=in[2], out=c1);				//and ANDs each bit together
+    And(a=c1, b=in[3], out=c2);				
+    And(a=c2, b=in[4], out=c3);
+    And(a=c3, b=in[5], out=c4);
+    And(a=c4, b=in[6], out=c5);
+    And(a=c5, b=in[7], out=c6);
+    And(a=c6, b=in[8], out=c7);
+    And(a=c7, b=in[9], out=c8);
+    And(a=c8, b=in[10], out=c9);
+    And(a=c9, b=in[11], out=c10);
+    And(a=c10, b=in[12], out=c11);
+    And(a=c11, b=in[13], out=c12);
+    And(a=c12, b=in[14], out=c13);			//outputs a 0 if any bit is a 0
+    And(a=c13, b=in[15], out=out);			//outputs a 1 if all bits are 1
+}
