@@ -1,0 +1,28 @@
+/******************
+*Matthew R Munster
+*AND16by1 Chip
+*******************/
+
+CHIP AND16by1 {
+
+    IN a[16],b;					//Two inputs. 16 bit a, and 1 bit b			
+    OUT c[16];					//One 16 bit output
+
+    PARTS:
+	And(a=a[0],b=b,out=c[0]);		//Calls And. And's a[i] and b
+	And(a=a[1],b=b,out=c[1]);		//Outputs 0 if a[i] or b has a 0
+	And(a=a[2],b=b,out=c[2]);		//Outputs a 1 if only a[i] and b is 1
+	And(a=a[3],b=b,out=c[3]);
+	And(a=a[4],b=b,out=c[4]);
+	And(a=a[5],b=b,out=c[5]);
+	And(a=a[6],b=b,out=c[6]);
+	And(a=a[7],b=b,out=c[7]);
+	And(a=a[8],b=b,out=c[8]);
+	And(a=a[9],b=b,out=c[9]);
+	And(a=a[10],b=b,out=c[10]);
+	And(a=a[11],b=b,out=c[11]);
+	And(a=a[12],b=b,out=c[12]);
+	And(a=a[13],b=b,out=c[13]);
+	And(a=a[14],b=b,out=c[14]);
+	And(a=a[15],b=b,out=c[15]);
+}

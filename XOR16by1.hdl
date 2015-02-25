@@ -1,0 +1,28 @@
+/******************
+*Matthew R Munster
+*XOR16by1 Chip
+*******************/
+
+CHIP XOR16by1 {
+
+    IN a[16],b;					//Two inputs. 16 bit a, and 1 bit b			
+    OUT c[16];					//One 16 bit output
+
+    PARTS:
+	Xor(a=a[0],b=b,out=c[0]);		//Calls Xor. Xor's a[i] and b
+	Xor(a=a[1],b=b,out=c[1]);		//Outputs 0 if a[i] and b are 0 or 1
+	Xor(a=a[2],b=b,out=c[2]);		//Outputs a 1 if only a[i] or b is 1
+	Xor(a=a[3],b=b,out=c[3]);
+	Xor(a=a[4],b=b,out=c[4]);
+	Xor(a=a[5],b=b,out=c[5]);
+	Xor(a=a[6],b=b,out=c[6]);
+	Xor(a=a[7],b=b,out=c[7]);
+	Xor(a=a[8],b=b,out=c[8]);
+	Xor(a=a[9],b=b,out=c[9]);
+	Xor(a=a[10],b=b,out=c[10]);
+	Xor(a=a[11],b=b,out=c[11]);
+	Xor(a=a[12],b=b,out=c[12]);
+	Xor(a=a[13],b=b,out=c[13]);
+	Xor(a=a[14],b=b,out=c[14]);
+	Xor(a=a[15],b=b,out=c[15]);
+}
